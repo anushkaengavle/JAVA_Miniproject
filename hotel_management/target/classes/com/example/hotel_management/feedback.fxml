@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="206.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel_management.HelloController">
+   <children>
+      <Text fx:id="PGF" layoutX="58.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please give Feedback" wrappingWidth="367.4508056640625">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="OB" layoutX="389.0" layoutY="140.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="74.0" text="OK" />
+   </children>
+</AnchorPane>
