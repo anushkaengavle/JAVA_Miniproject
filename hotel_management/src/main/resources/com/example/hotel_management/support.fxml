@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="206.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel_management.HelloController">
+   <children>
+      <Text fx:id="Help" layoutX="58.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How can we help you?" wrappingWidth="249.05078125">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField layoutX="58.0" layoutY="103.0" prefHeight="35.0" prefWidth="238.0" />
+   </children>
+</AnchorPane>
