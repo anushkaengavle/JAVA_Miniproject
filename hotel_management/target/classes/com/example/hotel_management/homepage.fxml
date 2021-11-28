@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="AP" prefHeight="750.0" prefWidth="900.0" styleClass="dark-background" stylesheets="@../../.." xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="AP" prefHeight="900.0" prefWidth="900.0" styleClass="dark-background" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel_management.homepageController">
    <children>
       <Rectangle fx:id="head" arcHeight="5.0" arcWidth="5.0" depthTest="DISABLE" fill="#00005e" height="52.0" layoutX="-1.0" layoutY="-1.0" strokeType="OUTSIDE" width="902.0">
          <stroke>
@@ -60,12 +60,12 @@
             </LinearGradient>
          </stroke>
       </Text>
-      <MenuButton fx:id="menu" accessibleRoleDescription="PROFILE" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" text="MENU">
+      <MenuButton fx:id="menu" accessibleRoleDescription="PROFILE" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#Menubutton" text="MENU">
         <items>
-          <MenuItem mnemonicParsing="false" text="profile" />
-          <MenuItem mnemonicParsing="false" text="login" />
-            <MenuItem mnemonicParsing="false" text="Action 2" />
-            <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem fx:id="pro" mnemonicParsing="false" onAction="#profile" text="profile" />
+            <MenuItem fx:id="FB" mnemonicParsing="false" onAction="#Feedback" text="Feedback" />
+            <MenuItem fx:id="Sp" mnemonicParsing="false" onAction="#Support" text="Support" />
+            <MenuItem fx:id="off" mnemonicParsing="false" onAction="#offer" text="Offers" />
         </items>
       </MenuButton>
       <ImageView fx:id="main_img" fitHeight="400.0" fitWidth="900.0" layoutY="51.0" pickOnBounds="true">
@@ -96,7 +96,6 @@
          </font>
       </Text>
       <TextField fx:id="cob" layoutX="517.0" layoutY="256.0" prefHeight="17.0" prefWidth="150.0" />
-      <Button fx:id="sb" layoutX="716.0" layoutY="256.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="150.0" text="SEARCH" />
       <Rectangle fx:id="foot" arcHeight="5.0" arcWidth="5.0" fill="#00005e" height="60.0" layoutY="690.0" stroke="#00005e" strokeType="INSIDE" width="902.0" />
       <Text fx:id="hp" fill="WHITE" layoutX="61.0" layoutY="714.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help">
          <font>
@@ -132,10 +131,11 @@
       <TextField fx:id="t5" layoutX="516.0" layoutY="570.0" prefHeight="11.0" prefWidth="92.0" />
       <TextField fx:id="t6" layoutX="639.0" layoutY="570.0" prefHeight="11.0" prefWidth="92.0" />
       <TextField fx:id="t7" layoutX="769.0" layoutY="570.0" prefHeight="11.0" prefWidth="92.0" />
-      <Button layoutX="824.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.4" text="Log out">
+      <Button fx:id="LB" layoutX="824.0" layoutY="12.0" mnemonicParsing="false" onAction="#logoutbutton" prefHeight="26.0" prefWidth="66.4" text="Logout">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
+      <Button fx:id="sb" layoutX="716.0" layoutY="256.0" mnemonicParsing="false" onAction="#Searchbutton" prefHeight="17.0" prefWidth="150.0" text="SEARCH" />
    </children>
 </AnchorPane>

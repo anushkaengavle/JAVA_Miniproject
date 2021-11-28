@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel_management.ProfilePageController">
     <children>
         <Text layoutX="78.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username :" wrappingWidth="133.13671875">
             <font>
@@ -50,15 +49,7 @@
                 <Font size="22.0" />
             </font>
         </Text>
-        <TextField layoutX="302.0" layoutY="185.0" prefHeight="25.0" prefWidth="362.0" />
-        <TextField layoutX="302.0" layoutY="241.0" prefHeight="25.0" prefWidth="362.0" />
-        <TextField layoutX="302.0" layoutY="303.0" prefHeight="25.0" prefWidth="362.0" />
-        <TextField layoutX="302.0" layoutY="362.0" prefHeight="25.0" prefWidth="362.0" />
-        <TextField layoutX="302.0" layoutY="423.0" prefHeight="25.0" prefWidth="362.0" />
-        <TextField layoutX="302.0" layoutY="479.0" prefHeight="25.0" prefWidth="362.0" />
-        <TextField layoutX="302.0" layoutY="537.0" prefHeight="25.0" prefWidth="362.0" />
-        <TextField layoutX="302.0" layoutY="594.0" prefHeight="25.0" prefWidth="362.0" />
-        <Button layoutX="12.0" layoutY="11.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="66.0" text="Back">
+        <Button fx:id="Bb" layoutX="12.0" layoutY="11.0" mnemonicParsing="false" onAction="#Bbutton" prefHeight="29.0" prefWidth="66.0" text="Back">
             <font>
                 <Font size="16.0" />
             </font>
@@ -73,5 +64,13 @@
                 <Font size="34.0" />
             </font>
         </Text>
+      <Text fx:id="userl" layoutX="353.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
+      <Text fx:id="email" layoutX="344.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
+      <Text fx:id="passl" layoutX="353.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
+      <Text fx:id="Id" layoutX="353.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
+      <Text fx:id="BD" layoutX="353.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
+      <Text fx:id="Gender" layoutX="360.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
+      <Text fx:id="Nationality" layoutX="360.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
+      <Text fx:id="Phone" layoutX="360.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
     </children>
 </Pane>
