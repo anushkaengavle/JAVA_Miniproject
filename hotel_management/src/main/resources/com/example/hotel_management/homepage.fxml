@@ -11,7 +11,6 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -68,35 +67,35 @@
             <MenuItem fx:id="off" mnemonicParsing="false" onAction="#offer" text="Offers" />
         </items>
       </MenuButton>
-      <ImageView fx:id="main_img" fitHeight="400.0" fitWidth="900.0" layoutY="51.0" pickOnBounds="true">
+      <ImageView fx:id="main_img" fitHeight="641.0" fitWidth="902.0" layoutY="51.0" pickOnBounds="true">
          <image>
             <Image url="@../../../photos/manuel-moreno-DGa0LQ0yDPc-unsplash.jpg" />
          </image>
       </ImageView>
-      <Text fx:id="moto" layoutX="174.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don’t worry we’ll help you reach your destiny..." wrappingWidth="595.1510305404663">
+      <Text fx:id="moto" layoutX="82.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don’t worry we’ll help you reach your destiny..." wrappingWidth="696.7510061264038">
          <font>
-            <Font name="Romantic" size="27.0" />
+            <Font name="Romantic" size="33.0" />
          </font>
       </Text>
-      <Text fx:id="dt" fill="WHITE" layoutX="41.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination">
+      <Text fx:id="dt" fill="WHITE" layoutX="29.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination">
          <font>
             <Font name="Rockwell" size="28.0" />
          </font>
       </Text>
-      <TextField fx:id="dtb" layoutX="41.0" layoutY="256.0" prefHeight="26.0" prefWidth="146.0" />
-      <Text fx:id="ci" fill="WHITE" layoutX="251.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check In">
+      <TextField fx:id="dtb" layoutX="28.0" layoutY="364.0" prefHeight="26.0" prefWidth="146.0" />
+      <Text fx:id="ci" fill="WHITE" layoutX="242.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check In">
          <font>
             <Font name="Rockwell" size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="cib" layoutX="242.0" layoutY="256.0" />
-      <Text fx:id="co" fill="WHITE" layoutX="517.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check Out">
+      <TextField fx:id="cib" layoutX="242.0" layoutY="365.0" />
+      <Text fx:id="co" fill="WHITE" layoutX="501.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check Out">
          <font>
             <Font name="Rockwell" size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="cob" layoutX="517.0" layoutY="256.0" prefHeight="17.0" prefWidth="150.0" />
-      <Rectangle fx:id="foot" arcHeight="5.0" arcWidth="5.0" fill="#00005e" height="60.0" layoutY="690.0" stroke="#00005e" strokeType="INSIDE" width="902.0" />
+      <TextField fx:id="cob" layoutX="501.0" layoutY="365.0" prefHeight="17.0" prefWidth="150.0" />
+      <Rectangle fx:id="foot" arcHeight="5.0" arcWidth="5.0" fill="#00005e" height="60.0" layoutY="693.0" stroke="#00005e" strokeType="INSIDE" width="902.0" />
       <Text fx:id="hp" fill="WHITE" layoutX="61.0" layoutY="714.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help">
          <font>
             <Font size="20.0" />
@@ -117,25 +116,11 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Circle fx:id="c1" fill="WHITE" layoutX="74.0" layoutY="511.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
-      <TextField fx:id="t1" layoutX="28.0" layoutY="570.0" prefHeight="11.0" prefWidth="92.0" />
-      <Circle fx:id="c2" fill="WHITE" layoutX="196.0" layoutY="511.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="c3" fill="WHITE" layoutX="320.0" layoutY="511.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="c4" fill="WHITE" layoutX="439.0" layoutY="511.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="c5" fill="WHITE" layoutX="562.0" layoutY="511.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="c6" fill="WHITE" layoutX="685.0" layoutY="511.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="c7" fill="WHITE" layoutX="807.0" layoutY="511.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
-      <TextField fx:id="t2" layoutX="150.0" layoutY="570.0" prefHeight="11.0" prefWidth="92.0" />
-      <TextField fx:id="t3" layoutX="274.0" layoutY="570.0" prefHeight="11.0" prefWidth="92.0" />
-      <TextField fx:id="t4" layoutX="393.0" layoutY="570.0" prefHeight="11.0" prefWidth="92.0" />
-      <TextField fx:id="t5" layoutX="516.0" layoutY="570.0" prefHeight="11.0" prefWidth="92.0" />
-      <TextField fx:id="t6" layoutX="639.0" layoutY="570.0" prefHeight="11.0" prefWidth="92.0" />
-      <TextField fx:id="t7" layoutX="769.0" layoutY="570.0" prefHeight="11.0" prefWidth="92.0" />
       <Button fx:id="LB" layoutX="824.0" layoutY="12.0" mnemonicParsing="false" onAction="#logoutbutton" prefHeight="26.0" prefWidth="66.4" text="Logout">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
-      <Button fx:id="sb" layoutX="716.0" layoutY="256.0" mnemonicParsing="false" onAction="#Searchbutton" prefHeight="17.0" prefWidth="150.0" text="SEARCH" />
+      <Button fx:id="sb" layoutX="716.0" layoutY="364.0" mnemonicParsing="false" onAction="#Searchbutton" prefHeight="17.0" prefWidth="150.0" text="SEARCH" />
    </children>
 </AnchorPane>

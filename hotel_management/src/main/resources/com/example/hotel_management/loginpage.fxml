@@ -31,7 +31,7 @@
       </Text>
       <TextField fx:id="T2" layoutX="56.0" layoutY="244.0" prefHeight="27.0" prefWidth="194.0" promptText="password" />
       <Button layoutX="355.0" layoutY="394.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="32.0" prefWidth="63.0" text="Next" />
-      <Label fx:id="NB" layoutX="56.0" layoutY="315.0" prefHeight="18.0" prefWidth="194.0" />
+      <Label fx:id="NB" layoutX="56.0" layoutY="315.0" prefHeight="18.0" prefWidth="194.0" textFill="RED" />
       <Button layoutX="355.0" layoutY="324.0" mnemonicParsing="false" onAction="#sp" prefHeight="32.0" prefWidth="63.0" text="Sign up" />
    </children>
 </AnchorPane>
