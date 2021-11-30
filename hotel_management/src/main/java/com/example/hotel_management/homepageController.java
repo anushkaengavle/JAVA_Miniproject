@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
@@ -134,6 +135,7 @@ public class homepageController {
         @FXML
         public void logoutbutton (ActionEvent event) throws Exception{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("loginpage.fxml"));
+            ((Node) (event.getSource())).getScene().getWindow().hide();
             Scene scene = new Scene(fxmlLoader.load(), 455, 456);
             Stage stage = new Stage();
             stage.setTitle("Hello!");
@@ -179,6 +181,7 @@ public class homepageController {
         @FXML
         public void offer (ActionEvent event) throws Exception{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("offer.fxml"));
+            ((Node) (event.getSource())).getScene().getWindow().hide();
             Scene scene = new Scene(fxmlLoader.load(), 600, 400);
             Stage stage = new Stage();
             stage.setTitle("Hello!");

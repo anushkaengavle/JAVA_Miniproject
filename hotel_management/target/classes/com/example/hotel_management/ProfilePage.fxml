@@ -54,23 +54,18 @@
                 <Font size="16.0" />
             </font>
         </Button>
-        <Button layoutX="820.0" layoutY="11.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="66.0" text="Edit">
-            <font>
-                <Font size="16.0" />
-            </font>
-        </Button>
         <Text layoutX="37.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile:" underline="true" wrappingWidth="127.13671875">
             <font>
                 <Font size="34.0" />
             </font>
         </Text>
-      <Text fx:id="userl" layoutX="353.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
-      <Text fx:id="email" layoutX="344.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
-      <Text fx:id="passl" layoutX="353.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
-      <Text fx:id="Id" layoutX="353.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
-      <Text fx:id="BD" layoutX="353.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
-      <Text fx:id="Gender" layoutX="360.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
-      <Text fx:id="Nationality" layoutX="360.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
-      <Text fx:id="Phone" layoutX="360.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.13671875" />
+      <Text fx:id="userl" layoutX="347.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="220.53668212890625" />
+      <Text fx:id="email" layoutX="346.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
+      <Text fx:id="passl" layoutX="353.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
+      <Text fx:id="Id" layoutX="360.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
+      <Text fx:id="BD" layoutX="353.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
+      <Text fx:id="Gender" layoutX="353.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
+      <Text fx:id="Nationality" layoutX="360.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
+      <Text fx:id="Phone" layoutX="360.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
     </children>
 </Pane>
