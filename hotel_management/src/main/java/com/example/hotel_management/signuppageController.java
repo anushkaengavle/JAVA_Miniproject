@@ -18,7 +18,8 @@ public class signuppageController {
     }
     @FXML
     public void ntbutton2 (ActionEvent event) throws Exception{
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("homepage.fxml"));
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 750);
         Stage stage = new Stage();
         stage.setTitle("Hello!");
