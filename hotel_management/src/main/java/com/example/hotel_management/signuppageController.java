@@ -21,6 +21,7 @@ public class signuppageController {
 
     @FXML
     private Label LB1; // error message
+
     @FXML
     private TextField TF1; //name
 
@@ -35,31 +36,47 @@ public class signuppageController {
 
     @FXML
     private TextField TF5; //id
-
     @FXML
+    public void back (ActionEvent event) throws Exception{
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("loginpage.fxml"));
+        ((Node) (event.getSource())).getScene().getWindow().hide();
+        Scene scene = new Scene(fxmlLoader.load(), 456, 455);
+        ((Node) (event.getSource())).getScene().getWindow().hide();
+        Stage stage = new Stage();
+        stage.setTitle("login");
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+
+    public static String name,mobile,email,pass,id;
+    public int phone;
     public void ntbutton2(ActionEvent event) throws Exception {
         DatabaseConnection connectnow = new DatabaseConnection();
         Connection connectdb = connectnow.getconnection();
+        Statement state = connectdb.createStatement();
 
-        String name = TF1.getText();
-        String mobile = TF2.getText();
-        String email = TF3.getText();
-        String pass = TF4.getText();
-        String id = TF5.getText();
+        name = TF1.getText();
+        mobile = TF2.getText();
+        phone=Integer.parseInt(mobile);
+        email = TF3.getText();
+        pass = TF4.getText();
+        id = TF5.getText();
 
         if (name.equals("")|| mobile.equals("") || email.equals("") || pass.equals("") || id.equals("")) {
             LB1.setText("****All Fields Are Required****");
         }
         else {
-            String custdetail = "insert into customer (cus_id,cus_name,cus_mobile,cus_email,cus_pass,c_IDproof) select max(cus_id)+1,'"+name+"','"+mobile+"','"+email+"','"+pass+"','"+id+"' from customer";
-            Statement state = connectdb.createStatement();
+            String custdetail = "insert into customer (cus_id,cus_name,cus_mobile,cus_email,cus_pass,c_IDproof) select max(cus_id)+1,'"+name+"','"+phone+"','"+email+"','"+pass+"','"+id+"' from customer";
             state.executeUpdate(custdetail);
+
             try {
+                LB1.setText("Login succuessful");
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("loginpage.fxml"));
                 ((Node) (event.getSource())).getScene().getWindow().hide();
-                Scene scene = new Scene(fxmlLoader.load(), 900, 750);
+                Scene scene = new Scene(fxmlLoader.load(), 456, 455);
                 Stage stage = new Stage();
-                stage.setTitle("Hello!");
+                stage.setTitle("login");
                 stage.setScene(scene);
                 stage.show();
             } catch (Exception ep) {

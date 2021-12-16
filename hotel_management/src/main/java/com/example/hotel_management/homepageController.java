@@ -1,23 +1,21 @@
 package com.example.hotel_management;
 
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.scene.layout.HBox;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class homepageController {
     @FXML
@@ -30,18 +28,6 @@ public class homepageController {
     private Text destiny;
 
     @FXML
-    private Rectangle db;
-
-    @FXML
-    private MenuButton menu;
-
-    @FXML
-    private Line dl1;
-
-    @FXML
-    private Line dl2;
-
-    @FXML
     private ImageView main_img;
 
     @FXML
@@ -52,21 +38,6 @@ public class homepageController {
 
     @FXML
     private TextField dtb;
-
-    @FXML
-    private Text ci;
-
-    @FXML
-    private TextField cib;
-
-    @FXML
-    private Text co;
-
-    @FXML
-    private TextField cob;
-
-    @FXML
-    private Button sb;
 
     @FXML
     private Rectangle foot;
@@ -84,111 +55,127 @@ public class homepageController {
     private Text ct;
 
     @FXML
-    private Circle c1;
+    private Button c1;
 
     @FXML
-    private TextField t1;
+    private Button sb;
 
     @FXML
-    private Circle c2;
+    private Button c4;
 
     @FXML
-    private Circle c3;
+    private Button c2;
 
     @FXML
-    private Circle c4;
+    private Button LB1;
+    public static String dest,price;
+    public static String username;
 
-    @FXML
-    private Circle c5;
-
-    @FXML
-    private Circle c6;
-
-    @FXML
-    private Circle c7;
-
-    @FXML
-    private TextField t2;
-
-    @FXML
-    private TextField t3;
-
-    @FXML
-    private TextField t4;
-
-    @FXML
-    private TextField t5;
-
-    @FXML
-    private TextField t6;
-
-    @FXML
-    private TextField t7;
-        public void Menubutton(ActionEvent event) throws Exception {
-            Stage stage = new Stage();
-            stage.setTitle("ImageView Experiment 1");
-            MenuButton menu = new MenuButton();
-            Scene scene = new Scene(menu, 200, 100);
-            stage.setScene(scene);
-            stage.show();
-        }
         @FXML
         public void logoutbutton (ActionEvent event) throws Exception{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("loginpage.fxml"));
+
             ((Node) (event.getSource())).getScene().getWindow().hide();
             Scene scene = new Scene(fxmlLoader.load(), 455, 456);
             Stage stage = new Stage();
-            stage.setTitle("Hello!");
+            stage.setTitle("login");
             stage.setScene(scene);
             stage.show();
         }
         @FXML
-        public void Searchbutton (ActionEvent event) throws Exception{
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Mybooking.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 900, 750);
-            Stage stage = new Stage();
-            stage.setTitle("Hello!");
-            stage.setScene(scene);
-            stage.show();
+        public void Searchbutton (ActionEvent event) throws Exception {
+            DatabaseConnection connectnow = new DatabaseConnection();
+            Connection connectdb = connectnow.getconnection();
+            Statement state = connectdb.createStatement();
+
+            dest = dtb.getText();
+            String search = "select * from hotel where h_city ='" + dest + "'";
+            try {
+                state.executeQuery(search);
+                ResultSet resultSet = state.executeQuery(search);
+                System.out.print(resultSet.toString());
+                while (resultSet.next()) {
+                    price = resultSet.getString(5);
+                }
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Booking.fxml"));
+                ((Node) (event.getSource())).getScene().getWindow().hide();
+                Scene scene = new Scene(fxmlLoader.load(), 999, 585);
+                Stage stage = new Stage();
+                stage.setTitle("booking");
+                stage.setScene(scene);
+                stage.show();
+            } catch (Exception ep) {
+                ep.printStackTrace();
+            } finally {
+
+                state.close();
+            }
         }
         @FXML
         public void profile (ActionEvent event) throws Exception{
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ProfilePage.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 900, 750);
-            Stage stage = new Stage();
-            stage.setTitle("Hello!");
-            stage.setScene(scene);
-            stage.show();
-        }
+                Stage stage = new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ProfilePage.fxml"));
+                ((Node) (event.getSource())).getScene().getWindow().hide();
+                Scene scene = new Scene(fxmlLoader.load(), 900, 750);
+                stage.setTitle("profile");
+                stage.setScene(scene);
+                stage.show();
+            }
+
+
+
         @FXML
         public void Feedback (ActionEvent event) throws Exception{
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Feedbackmainpage.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 424, 315);
+            ((Node) (event.getSource())).getScene().getWindow().hide();
+        Scene scene = new Scene(fxmlLoader.load(), 456, 371);
         Stage stage = new Stage();
-        stage.setTitle("Hello!");
+        stage.setTitle("Feedback");
         stage.setScene(scene);
         stage.show();
     }
         @FXML
         public void Support (ActionEvent event) throws Exception{
+            try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("support.fxml"));
+            ((Node) (event.getSource())).getScene().getWindow().hide();
             Scene scene = new Scene(fxmlLoader.load(), 500, 206);
             Stage stage = new Stage();
-            stage.setTitle("Hello!");
+            stage.setTitle("Support");
             stage.setScene(scene);
             stage.show();
+        }
+            catch (Exception ep) {
+                ep.printStackTrace();
+            }
         }
         @FXML
         public void offer (ActionEvent event) throws Exception{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("offer.fxml"));
-            ((Node) (event.getSource())).getScene().getWindow().hide();
             Scene scene = new Scene(fxmlLoader.load(), 600, 400);
             Stage stage = new Stage();
-            stage.setTitle("Hello!");
+            stage.setTitle("Special offer");
             stage.setScene(scene);
             stage.show();
         }
+        @FXML
+
+    public void book(ActionEvent event) throws Exception{
+            try{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MyBooking.fxml"));
+            ((Node) (event.getSource())).getScene().getWindow().hide();
+            Scene scene = new Scene(fxmlLoader.load(), 900, 750);
+            Stage stage = new Stage();
+            stage.setTitle("booking");
+            stage.setScene(scene);
+            stage.show();
+        }catch (Exception ep) {
+                ep.printStackTrace();
         }
+    }
+
+
+}
 
 
 

@@ -11,13 +11,14 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("loginpage.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 455, 455);
-        stage.setTitle("loginpage");
+        Scene scene = new Scene(fxmlLoader.load(), 456, 455);
+        stage.setTitle("login");
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
         launch();
+
     }
 }

@@ -1,71 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel_management.ProfilePageController">
-    <children>
-        <Text layoutX="78.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username :" wrappingWidth="133.13671875">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00005e" height="58.0" layoutX="-1.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="902.0" />
-        <Text layoutX="78.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" wrappingWidth="133.13671875">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Text>
-        <Text layoutX="78.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email  ID  :" wrappingWidth="133.13671875">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Text>
-        <Text layoutX="78.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Proof   :" wrappingWidth="133.13671875">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Text>
-        <Text layoutX="78.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birth Date :" wrappingWidth="133.13671875">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Text>
-        <Text layoutX="78.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender    :" wrappingWidth="133.13671875">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Text>
-        <Text layoutX="78.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nationality :" wrappingWidth="133.13671875">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Text>
-        <Text layoutX="78.0" layoutY="618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone No :" wrappingWidth="133.13671875">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Text>
-        <Button fx:id="Bb" layoutX="12.0" layoutY="11.0" mnemonicParsing="false" onAction="#Bbutton" prefHeight="29.0" prefWidth="66.0" text="Back">
-            <font>
-                <Font size="16.0" />
-            </font>
-        </Button>
-        <Text layoutX="37.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile:" underline="true" wrappingWidth="127.13671875">
-            <font>
-                <Font size="34.0" />
-            </font>
-        </Text>
-      <Text fx:id="userl" layoutX="347.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="220.53668212890625" />
-      <Text fx:id="email" layoutX="346.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
-      <Text fx:id="passl" layoutX="353.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
-      <Text fx:id="Id" layoutX="360.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
-      <Text fx:id="BD" layoutX="353.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
-      <Text fx:id="Gender" layoutX="353.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
-      <Text fx:id="Nationality" layoutX="360.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
-      <Text fx:id="Phone" layoutX="360.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.7366943359375" />
-    </children>
-</Pane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel_management.ProfilePageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00005e" height="58.0" stroke="BLACK" strokeType="INSIDE" width="900.0" />
+      <Button fx:id="Bbutton" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#Bbutton" prefHeight="29.0" prefWidth="66.0" text="Back">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="DB" layoutX="27.0" layoutY="668.0" mnemonicParsing="false" onAction="#DB" prefHeight="58.0" prefWidth="153.0" text="Delete Profile">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="lb1" layoutX="324.0" layoutY="169.0" prefHeight="47.0" prefWidth="252.0">
+         <font>
+            <Font name="System Italic" size="34.0" />
+         </font>
+      </Label>
+      <Text layoutX="60.0" layoutY="208.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="Username :" wrappingWidth="194.73675537109375">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <Label fx:id="lb2" layoutX="324.0" layoutY="230.0" prefHeight="47.0" prefWidth="252.0">
+         <font>
+            <Font name="System Italic" size="34.0" />
+         </font>
+      </Label>
+      <Text layoutX="60.0" layoutY="269.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="Password  :" wrappingWidth="194.73675537109375">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <Label fx:id="lb3" layoutX="324.0" layoutY="293.0" prefHeight="47.0" prefWidth="252.0">
+         <font>
+            <Font name="System Italic" size="34.0" />
+         </font>
+      </Label>
+      <Text layoutX="60.0" layoutY="332.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="Email         :" wrappingWidth="194.73675537109375">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <Label fx:id="lb4" layoutX="324.0" layoutY="368.0" prefHeight="47.0" prefWidth="252.0">
+         <font>
+            <Font name="System Italic" size="34.0" />
+         </font>
+      </Label>
+      <Text layoutX="60.0" layoutY="407.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="Id Proof    :" wrappingWidth="194.73675537109375">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <Label fx:id="lb5" layoutX="324.0" layoutY="439.0" prefHeight="47.0" prefWidth="252.0">
+         <font>
+            <Font name="System Italic" size="34.0" />
+         </font>
+      </Label>
+      <Text layoutX="60.0" layoutY="478.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone no  :" wrappingWidth="194.73675537109375">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <Text layoutX="38.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile" underline="true" wrappingWidth="304.3367919921875">
+         <font>
+            <Font name="System Bold Italic" size="60.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

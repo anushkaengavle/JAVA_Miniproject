@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="315.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="371.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel_management.FeedbackmainpageController">
    <children>
-      <Text layoutX="80.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Over all" wrappingWidth="82.1533203125">
+      <Text layoutX="35.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall Rating" wrappingWidth="149.5999999999999">
          <font>
             <Font size="22.0" />
          </font>
@@ -19,45 +20,31 @@
             <Font size="30.0" />
          </font>
       </Text>
-      <Text layoutX="80.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food">
+      <Text layoutX="35.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meals">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Text layoutX="80.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff">
+      <Text layoutX="35.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Text layoutX="80.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facilities">
+      <Text layoutX="35.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facilities">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
       <Line endX="243.0" endY="1.52587890625E-5" layoutX="181.0" layoutY="58.0" startX="-113.79997253417969" startY="1.1444091796875E-5" />
-      <MenuButton layoutX="212.0" layoutY="98.0" mnemonicParsing="false" text="0-5">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </MenuButton>
-      <MenuButton layoutX="212.0" layoutY="144.0" mnemonicParsing="false" text="0-5">
-         <items>
-            <MenuItem mnemonicParsing="false" text="Action 1" />
-            <MenuItem mnemonicParsing="false" text="Action 2" />
-         </items>
-      </MenuButton>
-      <MenuButton layoutX="212.0" layoutY="188.0" mnemonicParsing="false" text="0-5">
-         <items>
-            <MenuItem mnemonicParsing="false" text="Action 1" />
-            <MenuItem mnemonicParsing="false" text="Action 2" />
-         </items>
-      </MenuButton>
-      <MenuButton layoutX="212.0" layoutY="230.0" mnemonicParsing="false" text="0-5">
-         <items>
-            <MenuItem mnemonicParsing="false" text="Action 1" />
-            <MenuItem mnemonicParsing="false" text="Action 2" />
-         </items>
-      </MenuButton>
+      <Button layoutX="314.0" layoutY="291.0" mnemonicParsing="false" onAction="#submit" prefHeight="32.0" prefWidth="102.0" text="submit" />
+      <Label layoutX="37.0" layoutY="68.0" prefHeight="26.0" prefWidth="230.0" text="Enter feedback from 1-5" textFill="#9c9c9c">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Slider fx:id="TF1" layoutX="235.0" layoutY="113.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="1" prefHeight="26.0" prefWidth="140.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="TF2" layoutX="235.0" layoutY="156.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="1" prefHeight="26.0" prefWidth="140.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="TF3" layoutX="235.0" layoutY="198.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="1" prefHeight="26.0" prefWidth="140.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="TF4" layoutX="235.0" layoutY="242.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="1" prefHeight="26.0" prefWidth="140.0" showTickLabels="true" showTickMarks="true" />
    </children>
 </AnchorPane>
